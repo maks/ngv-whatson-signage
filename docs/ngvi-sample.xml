@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<whats_on_feed>
+    <programs>
+<program>
+    <id>546764:start_date_ts=1338861600,end_date_ts=1338861600,type_code=calendar_event_multi_date</id>
+    <category><![CDATA[NGV Talks]]></category>
+    <subcategory><![CDATA[]]></subcategory>
+    <type>single</type>
+    <name>Date 885</name>
+    <title><![CDATA[Group Introductory Talks: Napoleon]]></title>
+    <exhibition><![CDATA[Napoleon]]></exhibition>
+    <exhibition_id><![CDATA[519935]]></exhibition_id>
+    <start_time><![CDATA[2012-06-05T12:00:00+10:00]]></start_time>
+    <end_time><![CDATA[]]></end_time>
+    <entry><![CDATA[Ticketed]]></entry>
+    <venue><![CDATA[Clemenger BBDO Auditorium]]></venue>
+    <location><![CDATA[NGVI]]></location>
+    <level><![CDATA[Level G]]></level>
+    <ticketing_info><![CDATA[$33 Adult / $28 NGV Member / $29.50 Concession (includes exhibition entry fees)]]></ticketing_info>
+    <booking_code><![CDATA[]]></booking_code>
+    <description><![CDATA[<P>An illustrated introduction to the exhibition in the comfort of the theatre prior to your exhibition viewing.</P>
+<P>&nbsp;</P>
+<P>Call Ticketmaster Group Bookings&nbsp;on 1300 889 278 or email <A href="mailto:groups@ticketmaster.com.au" target=_parent><FONT color=#0000ff>groups@ticketmaster.com.au</FONT></A>.</P>]]></description>
+</program>        </programs>
+        <tours><tour>
+    <id>546764:start_date_ts=1338861600,end_date_ts=1338861600,type_code=calendar_event_multi_date</id>
+    <category><![CDATA[NGV Talks]]></category>
+    <subcategory><![CDATA[]]></subcategory>
+    <type>single</type>
+    <name>Date 885</name>
+    <title><![CDATA[Group Introductory Talks: Napoleon]]></title>
+    <exhibition><![CDATA[Napoleon]]></exhibition>
+    <exhibition_id><![CDATA[519935]]></exhibition_id>
+    <start_time><![CDATA[2012-06-05T12:00:00+10:00]]></start_time>
+    <end_time><![CDATA[]]></end_time>
+    <entry><![CDATA[Ticketed]]></entry>
+    <venue><![CDATA[Clemenger BBDO Auditorium]]></venue>
+    <location><![CDATA[NGVI]]></location>
+    <level><![CDATA[Level G]]></level>
+    <ticketing_info><![CDATA[$33 Adult / $28 NGV Member / $29.50 Concession (includes exhibition entry fees)]]></ticketing_info>
+    <booking_code><![CDATA[]]></booking_code>
+    <description><![CDATA[<P>An illustrated introduction to the exhibition in the comfort of the theatre prior to your exhibition viewing.</P>
+<P>&nbsp;</P>
+<P>Call Ticketmaster Group Bookings&nbsp;on 1300 889 278 or email <A href="mailto:groups@ticketmaster.com.au" target=_parent><FONT color=#0000ff>groups@ticketmaster.com.au</FONT></A>.</P>]]></description>
+</tour>    </tours>
+    <exhibitions>
+    </exhibitions>
+</whats_on_feed>
