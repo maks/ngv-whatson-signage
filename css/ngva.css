@@ -1,0 +1,17 @@
+body {
+	height: 1024px;
+	width: 768px;
+	overflow:hidden;
+   
+}
+
+/* Over-ride wih screen specific styles */
+.slide_wrap {
+	background-color: #000000;
+	height: 1024px;
+	width: 768px;
+}
+
+body>* {
+	  -moz-transform: scaleY(0.75) translateY(-212px);
+}

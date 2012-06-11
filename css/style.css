@@ -1,3 +1,112 @@
+@charset "UTF-8";
+
+body {
+	height: 1366px;
+	width: 768px;
+	overflow:hidden;
+   
+}
+
 .slide_wrap {
 	background-color: #000000;
+	display:block;
+	/* border:1px solid white; */
+	clear:both;
 }
+.storage {
+	visibility: visible;
+	display: none;
+}
+.slide_textwrap {
+	height: 230px;
+	padding-top: 30px;
+	padding-left: 30px;
+	width: 730px;
+}
+.slide_caption {
+	float: right;
+	font-family: "Akzidenz-Grotesk BQ Kiosk";
+	font-size: 10px;
+	color: #FFFFFF;
+	height: 140px;
+	margin-top: 40px;
+	width: 180px;
+}
+.slide_heading {
+	font-family: "Akzidenz-Grotesk BQ Kiosk";
+	font-size: 64px;
+    font-weight: bold;
+	color: #0099FF;
+	line-height: 72px;
+	width: 450px;
+	padding-bottom: 15px;
+}
+.slide_subtitle {
+    font-size: 30px;    
+}
+.slide_dates {
+	font-family: "Akzidenz-Grotesk BQ Kiosk";
+	font-weight: bolder;
+	color: #FFFFFF;
+	font-size: 24px;
+	line-height: 30px;
+	width: 190px;
+	float: left;
+}
+.slide_location {
+	height: 80px;
+	padding-top: 40px;
+	font-size: 18px;
+	color: #999999;
+	line-height: 20px;
+}
+.slide_free {
+	height: 86px;
+	width: 720px;
+}
+.slide_img {
+	/*height: 790px;
+	width: 768px; */
+/*
+	background-color: #003366; */
+}
+.slide_viclogo {
+	background-image: url(../images/logo.jpg);
+	height: 50px;
+	width: 140px;
+	float: right;
+	clear: left;
+	padding: 0px;
+	margin-top: 30px;
+	background-repeat: no-repeat;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.slide_sponsors {
+	float: left;
+	height: 190px;
+	background-color: #000000;
+	width: 340px;
+	padding-left: 10px;
+}
+.slide_foot {
+	width: 730px;
+	float: left;
+}
+.slide_top {
+	height: 400px;
+	float: left;
+	/* width: 768px; */
+}
+.slide_textwrap2 {
+	padding-left: 20px;
+	height: 200px;
+}
+
+.slide_subtitle {
+	font-size: 16px;
+	line-height: 18px;
+	clear: right;
+	height: 16px;
+	}

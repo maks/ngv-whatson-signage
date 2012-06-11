@@ -12,28 +12,59 @@
 </head>
 
 <body>
-
-    <div id="programs">
-        <h1>Programs</h1>
+    <div class="events">
+            <div class="header">
+                What's On
+            </div><br />
+            <div class="slidewindow">
+                <div class="main">
+                    <span class="dates">{TIMES}</span>
+                    <div class="indent">
+                        <span class="title">{EVENT TITLE}</span><br />
+                        <span class="title_ex">{EXHIBITION TITLE}</span><br />
+                        <span class="venue">{VENUE}</span>
+                    </div><!-- class=indent -->
+                    
+                </div><!-- class=main -->
+                <div class="slidepadding"></div>
+                
+            </div>
+        </div>
         
-        <ul id="program_list">
-        </ul>
-    </div>
-    
-    <div id="tours">
-        <h1>Tours</h1>
-        
-        <ul id="tour_list">
-        </ul>
-    </div>
-    
-    <div id="exhibitions">
-        <ul id="programlist">
-        </ul>
-    </div>
-
-
-
+        <div class="slide_wrap">
+            <div class="slide_img">
+                <img src="" class="slide_img_img" />
+                <video src="" class="slide_vid_vid" >a video</video>
+                
+            </div>
+            <div class="slide_textwrap">
+                <div class="slide_heading" style="color: 84d5f7;">
+                    {EXHIBITION TITLE}
+                </div>
+                <div class="slide_free">
+                    <img src='mysource_files/free_NGVI.jpg' />
+                </div>
+            </div>
+            <div class="slide_textwrap2">
+                <div class="slide_foot">
+                    <div class="slide_dates">
+                        <div class="slide_subtitle" style="color: eef784;">
+                            {EXHIBITION SUBTITLE}
+                        </div>
+                        <div class="slide_location">
+                            {LEVEL}<br />
+                            {GALLERY}
+                        </div>
+                        <div class="slide_actualdates">{DATE} -<br />
+                        {DATE}</div>
+                    </div>
+                    <div class="slide_caption">
+                        {CAPTION}
+                    </div>
+                    <div class="slide_sponsors">{SPONSOR IMAGES}</div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
