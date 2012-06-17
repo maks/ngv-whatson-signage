@@ -79,11 +79,27 @@ function Slidedeck() {
         return plugins;
     };        
     
-    this.append = function(duration, slideDOM) {
-        console.debug("add slide:"+slideDOM);
-        slides.push( { "duration" : duration, "dom" : slideDOM } );        
+    /**
+     *
+     */
+    this.setSlideSet = function(slideSet, duration, slideDOMs) {
+        var newSlides = [];
+        
+        //strip out any existing slides for this slideSet name
+        for(var i in slides) {
+            if (slides[i].slideSet != slideSet) {
+                newSlides.push(slides[i]);
+            }
+        }
+        
+        //now add the new slides
+        slideDOMs.forEach( function (x) {
+            console.debug("add slide:"+x);
+            newSlides.push( { "slideSet": slideSet, "duration" : duration, "dom" : x } );        
+        });
+        slides = newSlides;
     };
-    
+        
     function showNextSlide() {
         $(".slide_display").empty().append(slides[slideCounter].dom);
     }

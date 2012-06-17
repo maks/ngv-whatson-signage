@@ -14,16 +14,18 @@ function ImagePlugin() {
     
     this.init = function() {
         console.debug("init Images plugin");
+        var slides = [];
         
         var element = $('<img />', {
           src: 'images/Napoleon03_info.jpg'
         });
-        Deck.append(5, element.get(0));
+        slides.push(element.get(0));
         
         element = $('<img />', {
           src: 'images/Napoleon09_info.jpg'
         });
-        Deck.append(5, element.get(0));
+        slides.push(element.get(0));
+        Deck.setSlideSet("images", 5, slides);
         
     };
     
