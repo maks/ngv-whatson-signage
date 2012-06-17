@@ -49,7 +49,7 @@ function WhatsonPlugin() {
     };
     
     this.poll = function() {
-        var DATA_URL = "docs/ngvi-sample.xml";
+        var DATA_URL = "docs/infoscreens-ngvi-sample.xml";
         if (dataRequestPending) {
             return;
         }
@@ -63,35 +63,56 @@ function WhatsonPlugin() {
 
     function gotXml(data) {
         dataRequestPending = false;
-        playList = {}; //TODO
+        var slides = [];
             
         console.log('xml data:', data);
-        $(data).find("program").each( function() {
-            var prog = { 
-                title : $(this).find("title").text(),
-                time: $(this).find("start_time").text(),
-                venue: $(this).find("venue").text()
+        //~ $(data).find("program").each( function() {
+            //~ var prog = { 
+                //~ title : $(this).find("title").text(),
+                //~ time: $(this).find("start_time").text(),
+                //~ venue: $(this).find("venue").text()
+            //~ };
+            //~ console.log('program:'+ prog.title);
+            //~ var output = Mustache.render(
+                //~ "<li>{{time}} {{title}} <br/> {{venue}}</li>",
+                //~ prog);
+            //~ $("#program_list").append(output);
+        //~ });
+        
+        //~ $(data).find("tour").each( function() {
+            //~ var prog = { 
+                //~ title : $(this).find("title").text(),
+                //~ time: $(this).find("start_time").text(),
+                //~ venue: $(this).find("venue").text()
+            //~ };
+            //~ console.log('program:'+ prog.title);
+            //~ var output = Mustache.render(
+                //~ "<li>{{time}} {{title}} <br/> {{venue}}</li>",
+                //~ prog);
+            //~ $("#tour_list").append(output);
+        //~ });
+        
+        $(data).find("exhibition").each( function() {
+            var exhib = { 
+                EXHIBITION_TITLE : $(this).find("title").text(),
+                EXHIBITION_SUBTITLE : $(this).find("subtitle").text(),
+                OPENING_DATE: $(this).find("opening_date").text(),
+                CLOSING_DATE: $(this).find("closing_date").text(),
+                LEVEL: $(this).find("level").text()
             };
-            console.log('program:'+ prog.title);
-            var output = Mustache.render(
-                "<li>{{time}} {{title}} <br/> {{venue}}</li>",
-                prog);
-            $("#program_list").append(output);
+            
+            console.log('exhib:'+ exhib.EXHIBITION_TITLE);
+            
+            var template = $(".exhibition_template").html();
+            var output = Mustache.render(template, exhib);
+            var element = $(output);
+            
+            slides.push(element.get(0));
+            //~ console.debug("EXH template:"+template);
+            console.debug("exi html:"+output);
         });
         
-        $(data).find("tour").each( function() {
-            var prog = { 
-                title : $(this).find("title").text(),
-                time: $(this).find("start_time").text(),
-                venue: $(this).find("venue").text()
-            };
-            console.log('program:'+ prog.title);
-            var output = Mustache.render(
-                "<li>{{time}} {{title}} <br/> {{venue}}</li>",
-                prog);
-            $("#tour_list").append(output);
-        });
-        
+        Deck.setSlideSet("exhibs", 5, slides);
     }
 }
 
