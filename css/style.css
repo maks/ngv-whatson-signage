@@ -7,10 +7,14 @@ body {
    
 }
 
+.templates {
+	display: none;
+}
+
 .slide_wrap {
 	background-color: #000000;
 	display:block;
-	/* border:1px solid white; */
+	border:1px solid red;
 	clear:both;
 }
 .storage {
