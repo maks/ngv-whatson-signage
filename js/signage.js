@@ -7,8 +7,18 @@ $(init);
 
 function init() {
     var TICK_PERIOD = 1 * 1000,
-        DATA_CHECK_TICKS_INTERVAL = 100, //check for new data interval 
+        DATA_CHECK_TICKS_INTERVAL = 20, //check for new data interval 
         ticks = 0;
+
+    // DEBUGGING ONLY ================
+    var paused = false;
+    window.onkeypress = function(evt) {
+        //console.debug("k:"+"p".charCodeAt(0),evt.charCode);
+        if ("p".charCodeAt(0) === evt.charCode) {
+            paused = !paused;
+        }
+    };
+    //===============================
     
     console.log("starting ticker...");
     
@@ -20,14 +30,17 @@ function init() {
     setInterval(
         function mainLoop() {            
             //console.log("tick"+ticks);    
-            checkForData();
+            if (paused) {
+                return;
+            }            
+            pollPlugins();
             Deck.show(ticks);
             ticks++;
         }, TICK_PERIOD);
         
-    function checkForData() {
-        //console.debug("check for new data");
-        if (ticks % DATA_CHECK_TICKS_INTERVAL === 0) {
+    function pollPlugins() {
+        if ((ticks % DATA_CHECK_TICKS_INTERVAL) === 0) {
+            console.debug("check for new data");
             Deck.getPlugins().forEach(function(x) {
                 x.poll();
             }); 
