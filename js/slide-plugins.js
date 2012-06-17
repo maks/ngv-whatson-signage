@@ -14,6 +14,17 @@ function ImagePlugin() {
     
     this.init = function() {
         console.debug("init Images plugin");
+        
+        var element = $('<img />', {
+          src: 'images/Napoleon03_info.jpg'
+        });
+        Deck.append(5, element.get(0));
+        
+        element = $('<img />', {
+          src: 'images/Napoleon09_info.jpg'
+        });
+        Deck.append(5, element.get(0));
+        
     };
     
     this.poll = function() {

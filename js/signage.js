@@ -40,12 +40,16 @@ function Slidedeck() {
     var slides = [],
         // plugins in external JS file will add themselves
         plugins = [],
+        slideCounter = 0,
         nextSlideTick = 0;
     
     this.show = function(tick) {
         //console.log("show"+tick); 
         if (tick >= nextSlideTick) {
+            slideCounter = (slideCounter < (slides.length - 1)) ? slideCounter+1 : 0;
             showNextSlide();
+            nextSlideTick = tick + slides[slideCounter].duration;
+            console.debug("dur:"+nextSlideTick);
         }
     };
     
@@ -63,17 +67,15 @@ function Slidedeck() {
     };        
     
     this.append = function(duration, slideDOM) {
-        slides.add( { "duration" : duration, "dom" : slideDOM } );
+        console.debug("add slide:"+slideDOM);
+        slides.push( { "duration" : duration, "dom" : slideDOM } );        
     };
     
     function showNextSlide() {
-        
+        $(".slide_display").empty().append(slides[slideCounter].dom);
     }
-    
-    
-    
-    
 }
+
 /**
  * Valid plugins MUST implement the following Inteface:
  * 
