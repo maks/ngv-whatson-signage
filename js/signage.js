@@ -3,27 +3,34 @@
 
 
 var dataRequestPending = false,
-    playList = null;
+    playList = null
+    deck = new Slidedeck();
 
 
 $(init);
 
 function init() {
-    var TICK = 1 * 1000;
+    var TICK = 1 * 1000,
+        count = 0;
     
     console.log("starting ticker...");
-
-    setInterval(mainLoop, TICK);
+    
+    // ye olde traditional mainloop
+    setInterval(
+        function mainLoop() {            
+            //console.log("tick"+count);    
+            checkForData();
+            deck.show(count);
+            count++;
+        }, TICK);
 }
 
-/**
- * ye olde traditional mainloop - in this case called once per TICK.
- */
-function mainLoop() {
-    //console.log("tick");    
-    checkForData();
-}
 
+function Slidedeck() {
+    this.show = function(tick) {
+        //console.log("show"+tick); 
+    }
+}
 
 function checkForData() {
     var DATA_URL = "docs/ngvi-sample.xml";
