@@ -1,79 +1,89 @@
 /*jshint browser: true, jquery:true, devel: true, undef:true */
-/*global Mustache: true */
+/*global  */
 
-
-var dataRequestPending = false,
-    playList = null
-    deck = new Slidedeck();
-
+var Deck = new Slidedeck();
 
 $(init);
 
 function init() {
-    var TICK = 1 * 1000,
-        count = 0;
+    var TICK_PERIOD = 1 * 1000,
+        DATA_CHECK_TICKS_INTERVAL = 100, //check for new data interval 
+        ticks = 0;
     
     console.log("starting ticker...");
+    
+    Deck.getPlugins().forEach(function(x) {
+        x.init();
+    });
     
     // ye olde traditional mainloop
     setInterval(
         function mainLoop() {            
-            //console.log("tick"+count);    
+            //console.log("tick"+ticks);    
             checkForData();
-            deck.show(count);
-            count++;
-        }, TICK);
+            Deck.show(ticks);
+            ticks++;
+        }, TICK_PERIOD);
+        
+    function checkForData() {
+        //console.debug("check for new data");
+        if (ticks % DATA_CHECK_TICKS_INTERVAL === 0) {
+            Deck.getPlugins().forEach(function(x) {
+                x.poll();
+            }); 
+        }
+    }
 }
 
 
 function Slidedeck() {
+    var slides = [],
+        // plugins in external JS file will add themselves
+        plugins = [],
+        nextSlideTick = 0;
+    
     this.show = function(tick) {
         //console.log("show"+tick); 
-    }
-}
-
-function checkForData() {
-    var DATA_URL = "docs/ngvi-sample.xml";
-    if (dataRequestPending) {
-        return;
-    }
+        if (tick >= nextSlideTick) {
+            showNextSlide();
+        }
+    };
     
-    if (playList === null ) {
-        dataRequestPending = true;
-        console.log("fetching "+DATA_URL);
-        $.get(DATA_URL, null, gotXml, 'xml');
-    }    
-}
-
-function gotXml(data) {
-    dataRequestPending = false;
-    playList = {}; //TODO
+    this.registerPlugin = function(PluginCons) {
+        var plugin = new PluginCons();
+        if (Slidedeck.validatePlugin(plugin)) {
+            plugins.push(plugin);
+        } else {
+            console.error("Invalid Plugin: "+PluginCons.name);
+        }
+    };        
+    
+    this.getPlugins = function(plugin) {
+        return plugins;
+    };        
+    
+    this.append = function(duration, slideDOM) {
+        slides.add( { "duration" : duration, "dom" : slideDOM } );
+    };
+    
+    function showNextSlide() {
         
-    console.log('xml data:', data);
-    $(data).find("program").each( function() {
-        var prog = { 
-            title : $(this).find("title").text(),
-            time: $(this).find("start_time").text(),
-            venue: $(this).find("venue").text()
-        };
-        console.log('program:'+ prog.title);
-        var output = Mustache.render(
-            "<li>{{time}} {{title}} <br/> {{venue}}</li>",
-            prog);
-        $("#program_list").append(output);
-    });
+    }
     
-    $(data).find("tour").each( function() {
-        var prog = { 
-            title : $(this).find("title").text(),
-            time: $(this).find("start_time").text(),
-            venue: $(this).find("venue").text()
-        };
-        console.log('program:'+ prog.title);
-        var output = Mustache.render(
-            "<li>{{time}} {{title}} <br/> {{venue}}</li>",
-            prog);
-        $("#tour_list").append(output);
-    });
+    
+    
     
 }
+/**
+ * Valid plugins MUST implement the following Inteface:
+ * 
+ * function init()
+ * function poll() 
+ */
+Slidedeck.validatePlugin = function(p) {
+    return ((typeof p != 'undefined') && Slidedeck.isAFunction(p.init) && Slidedeck.isAFunction(p.poll));
+};
+    
+Slidedeck.isAFunction = function(f) {
+    return ((typeof f != 'undefined') && (f instanceof Function)); 
+};
