@@ -20,27 +20,6 @@
     <ticketing_info><![CDATA[]]></ticketing_info>
     <booking_code><![CDATA[]]></booking_code>
     <description><![CDATA[<P>Join our esteemed Director as he speaks on favourite works on display in the nineteenth century painting and sculpture galleries.</P>]]></description>
-</program><program>
-    <id>546920:start_date_ts=1340330400,end_date_ts=1340330400,type_code=calendar_event_multi_date</id>
-    <category><![CDATA[NGV Talks]]></category>
-    <subcategory><![CDATA[]]></subcategory>
-    <type>single</type>
-    <name>Date 8903</name>
-    <title><![CDATA[Group Introductory Talks: Napoleon]]></title>
-    <exhibition><![CDATA[Napoleon]]></exhibition>
-    <exhibition_id><![CDATA[519935]]></exhibition_id>
-    <start_time><![CDATA[12:00]]></start_time>
-    <end_time><![CDATA[:]]></end_time>
-    <entry><![CDATA[Ticketed]]></entry>
-    <venue><![CDATA[Clemenger BBDO Auditorium]]></venue>
-    <location><![CDATA[NGVI]]></location>
-    <level><![CDATA[Level G]]></level>
-    <ticketing_info><![CDATA[$33 Adult / $28 NGV Member / $29.50 Concession (includes exhibition entry fees)]]></ticketing_info>
-    <booking_code><![CDATA[]]></booking_code>
-    <description><![CDATA[<P>An illustrated introduction to the exhibition in the comfort of the theatre prior to your exhibition viewing.</P>
-<P>&nbsp;</P>
-<P>Call Ticketmaster Group Bookings on 1300 889 278 or email <A href="mailto:groups@tickemaster.com.au" target=_parent>groups@tickemaster.com.au</A>.</P>
-<P>&nbsp;</P>]]></description>
 </program>        </programs>
         <tours>    </tours>
     <exhibitions>
@@ -60,7 +39,7 @@
             <highlight_colour><![CDATA[]]></highlight_colour>
             <lowlight_colour><![CDATA[]]></lowlight_colour>
         <images>
-<img src="http://www.ngv.vic.gov.au/__data/assets/image/0004/553198/Napoleon05_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0010/553195/Napoleon09_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0011/553196/Napoleon14_info.jpg" width="768" height="1365" />
+<img src="http://www.ngv.vic.gov.au/__data/assets/image/0015/553200/Napoleon04_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0004/553198/Napoleon05_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0010/553195/Napoleon09_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0011/553196/Napoleon14_info.jpg" width="768" height="1365" />
 </images>          </exhibition>
         <exhibition>
             <id>105793</id>
@@ -117,7 +96,9 @@
             <venue><![CDATA[NGV Kids Space]]></venue>
             <highlight_colour><![CDATA[]]></highlight_colour>
             <lowlight_colour><![CDATA[]]></lowlight_colour>
-        <images />          </exhibition>
+        <images>
+<img src="http://www.ngv.vic.gov.au/__data/assets/image/0009/545679/EA_info_mascot.jpg" width="768" height="790" />
+</images>          </exhibition>
         <exhibition>
             <id>529784</id>
             <title><![CDATA[Brent Harris]]></title>
@@ -147,7 +128,9 @@
             <venue><![CDATA[Contemporary Exhibitions]]></venue>
             <highlight_colour><![CDATA[]]></highlight_colour>
             <lowlight_colour><![CDATA[]]></lowlight_colour>
-        <images />          </exhibition>
+        <images>
+<img src="http://www.ngv.vic.gov.au/__data/assets/image/0003/548427/UnexpectedPleasures_info01.jpg" width="768" height="790" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0004/548428/UnexpectedPleasures_info02.jpg" width="768" height="790" />
+</images>          </exhibition>
 
     </exhibitions>
 </whats_on_feed>
