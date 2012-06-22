@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.7.2.js"></script>
-  <script src="js/mustache.js"></script>  
+  <script src="js/mustache.js"></script>
   <script src="js/signage.js"></script>
   <script src="js/slide-plugins.js"></script>
 </head>
@@ -16,67 +16,67 @@
     <div class="slide_display">
     </div>
 
-    
-        
+
+
     <div class="templates">
-    <div class="programs_template">
-        <div class="events">
-            <div class="header">
-                What's On
-            </div><br />
-            <div class="slidewindow">
-                <div class="main">
-                    <span class="dates">{TIMES}</span>
-                    <div class="indent">
-                        <span class="title">{EVENT TITLE}</span><br />
-                        <span class="title_ex">{EXHIBITION TITLE}</span><br />
-                        <span class="venue">{VENUE}</span>
-                    </div><!-- class=indent -->
-                    
-                </div><!-- class=main -->
-                <div class="slidepadding"></div>
-                
-            </div>
-        </div>
-    </div> <!-- /programs_template -->
-        
-    <div class="exhibition_template">
-        <div class="slide_wrap">
-            <div class="slide_img">
-                <img src="" class="slide_img_img" />
-                <!-- video src="" class="slide_img_vid" >a video</video -->
-                
-            </div>
-            <div class="slide_textwrap">
-                <div class="slide_heading" style="color: 84d5f7;">
-                    {{EXHIBITION_TITLE}}
-                </div>
-                <div class="slide_free">
-                    <img src='mysource_files/free_NGVI.jpg' />
+        <div class="programs_template">
+            <div class="events">
+                <div class="header">
+                    What's On
+                </div><br />
+                <div class="slidewindow">
+                    <div class="main">
+                        <span class="dates">{{TIMES}}</span>
+                        <div class="indent">
+                            <span class="title">{{EVENT TITLE}}</span><br />
+                            <span class="title_ex">{{EXHIBITION TITLE}}</span><br />
+                            <span class="venue">{{VENUE}}</span>
+                        </div><!-- class=indent -->
+
+                    </div><!-- class=main -->
+                    <div class="slidepadding"></div>
+
                 </div>
             </div>
-            <div class="slide_textwrap2">
-                <div class="slide_foot">
-                    <div class="slide_dates">
-                        <div class="slide_subtitle" style="color: eef784;">
-                            {{EXHIBITION_SUBTITLE}}
-                        </div>
-                        <div class="slide_location">
-                            {{LEVEL}}<br />
-                            {{GALLERY}}
-                        </div>
-                        <div class="slide_actualdates">{{OPENING_DATE}} -<br />
-                        {{CLOSING_DATE}}</div>
+        </div> <!-- /programs_template -->
+
+        <div class="exhibition_template">
+            <div class="slide_wrap">
+                <div class="slide_img">
+                    <img src="" class="slide_img_img" />
+                    <!-- video src="" class="slide_img_vid" >a video</video -->
+
+                </div>
+                <div class="slide_textwrap">
+                    <div class="slide_heading" style="color: 84d5f7;">
+                        {{EXHIBITION_TITLE}}
                     </div>
-                    <div class="slide_caption">
-                        {{CAPTION}}
+                    <div class="slide_free">
+                        <img src='mysource_files/free_NGVI.jpg' />
                     </div>
-                    <div class="slide_sponsors">{{SPONSOR_IMAGES}}</div>
+                </div>
+                <div class="slide_textwrap2">
+                    <div class="slide_foot">
+                        <div class="slide_dates">
+                            <div class="slide_subtitle" style="color: eef784;">
+                                {{EXHIBITION_SUBTITLE}}
+                            </div>
+                            <div class="slide_location">
+                                {{LEVEL}}<br />
+                                {{GALLERY}}
+                            </div>
+                            <div class="slide_actualdates">{{OPENING_DATE}} -<br />
+                            {{CLOSING_DATE}}</div>
+                        </div>
+                        <div class="slide_caption">
+                            {{CAPTION}}
+                        </div>
+                        <div class="slide_sponsors">{{SPONSOR_IMAGES}}</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div> <!-- /exhibition-template -->
-        
+        </div> <!-- /exhibition-template -->
+
     </div> <!-- /templates -->
 </body>
 </html>
