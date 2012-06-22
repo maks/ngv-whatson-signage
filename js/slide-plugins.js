@@ -101,7 +101,7 @@ function WhatsonPlugin() {
                 LEVEL: $(this).find("level").text()
             };
 
-            $(this).find("img").each(function() {
+            $(this).find("img").each( function() {
                     console.log('exhib:'+ exhib.EXHIBITION_TITLE+"-"+$(this).attr("src"));
 
                     exhib.EXHIBITION_IMAGE = $(this).attr("src");
