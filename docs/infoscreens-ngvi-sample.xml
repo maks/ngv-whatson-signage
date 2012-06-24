@@ -39,8 +39,12 @@
             <highlight_colour><![CDATA[]]></highlight_colour>
             <lowlight_colour><![CDATA[]]></lowlight_colour>
         <images>
-<img src="http://www.ngv.vic.gov.au/__data/assets/image/0015/553200/Napoleon04_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0004/553198/Napoleon05_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0010/553195/Napoleon09_info.jpg" width="768" height="1365" /><img src="http://www.ngv.vic.gov.au/__data/assets/image/0011/553196/Napoleon14_info.jpg" width="768" height="1365" />
-</images>          </exhibition>
+<img src="http://www.ngv.vic.gov.au/__data/assets/image/0015/553200/Napoleon04_info.jpg" width="768" height="1365" />
+<img src="http://www.ngv.vic.gov.au/__data/assets/image/0004/553198/Napoleon05_info.jpg" width="768" height="1365" />
+<img src="http://www.ngv.vic.gov.au/__data/assets/image/0010/553195/Napoleon09_info.jpg" width="768" height="1365" />
+<img src="http://www.ngv.vic.gov.au/__data/assets/image/0011/553196/Napoleon14_info.jpg" width="768" height="1365" />
+</images>          
+</exhibition>
         <exhibition>
             <id>105793</id>
             <title><![CDATA[The Dr Robert Wilson Collection]]></title>

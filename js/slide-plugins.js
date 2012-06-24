@@ -3,7 +3,7 @@
 
 //slide creation plugins
 
-Deck.registerPlugin(ImagePlugin);
+//Deck.registerPlugin(ImagePlugin);
 Deck.registerPlugin(WhatsonPlugin);
 
 /**
@@ -66,18 +66,19 @@ function WhatsonPlugin() {
         var slides = [];
 
         console.log('xml data:', data);
-        //~ $(data).find("program").each( function() {
-            //~ var prog = {
-                //~ title : $(this).find("title").text(),
-                //~ time: $(this).find("start_time").text(),
-                //~ venue: $(this).find("venue").text()
-            //~ };
-            //~ console.log('program:'+ prog.title);
-            //~ var output = Mustache.render(
-                //~ "<li>{{time}} {{title}} <br/> {{venue}}</li>",
-                //~ prog);
-            //~ $("#program_list").append(output);
-        //~ });
+        $(data).find("program").each( function() {
+            var prog = {
+                EVENT_TITLE: $(this).find("title").text(),
+                EXHIBITION_TITLE: $(this).find("exhibition").text(),
+                TIMES: $(this).find("start_time").text(),
+                VENUE: $(this).find("venue").text()
+            };
+            console.log('program:'+ prog.EVENT_TITLE);
+            var template = $("#programs_template").html();
+            var output = Mustache.render(template, prog);
+            var element = $(output);
+            slides.push(element.get(0));
+        });
 
         //~ $(data).find("tour").each( function() {
             //~ var prog = {
