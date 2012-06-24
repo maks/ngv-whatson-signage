@@ -102,17 +102,17 @@ function WhatsonPlugin() {
             };
 
             $(this).find("img").each( function() {
-                    console.log('exhib:'+ exhib.EXHIBITION_TITLE+"-"+$(this).attr("src"));
+                    console.log('add exhib:'+ exhib.EXHIBITION_TITLE+"-"+$(this).attr("src"));
 
                     exhib.EXHIBITION_IMAGE = $(this).attr("src");
 
-                    var template = $(".exhibition_template").html();
+                    var template = $("#exhibition_template").html();
                     var output = Mustache.render(template, exhib);
                     var element = $(output);
 
                     slides.push(element.get(0));
                     //~ console.debug("EXH template:"+template);
-                    console.debug("exi html:"+output);
+                    //~ console.debug("exi html:"+output);
             });
         });
 
