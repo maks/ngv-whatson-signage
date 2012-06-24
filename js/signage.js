@@ -80,7 +80,9 @@ function Slidedeck() {
     };        
     
     /**
-     *
+     * @param slideSet {String} Name of slideset
+     * @param duration {Number} duration in seconds ot display each slide in set
+     * @param slideDOMs {Array} of HTML DOM objects, each representing 1 slide
      */
     this.setSlideSet = function(slideSet, duration, slideDOMs) {
         var newSlides = [];
