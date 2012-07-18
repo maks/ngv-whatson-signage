@@ -67,6 +67,32 @@ function WhatsonPlugin() {
 	programlist = [];
 
         console.log('xml data:', data);
+
+	$(data).find("exhibition").each( function() {
+            var exhib = {
+                EXHIBITION_TITLE : $(this).find("title").text(),
+                EXHIBITION_SUBTITLE : $(this).find("subtitle").text(),
+                OPENING_DATE: $(this).find("opening_date").text(),
+                CLOSING_DATE: $(this).find("closing_date").text(),
+                LEVEL: $(this).find("level").text()
+            };
+
+            $(this).find("img").each( function() {
+                    console.log('add exhib:'+ exhib.EXHIBITION_TITLE+"-"+$(this).attr("src"));
+
+                    exhib.EXHIBITION_IMAGE = $(this).attr("src");
+
+                    var template = $("#exhibition_template").html();
+                    var output = Mustache.render(template, exhib);
+                    var element = $(output);
+
+                    slides.push(element.get(0));
+                    //~ console.debug("EXH template:"+template);
+                    //~ console.debug("exi html:"+output);
+            });
+        });
+
+
         $(data).find("program").each( function() {
             var prog = {
                 EVENT_TITLE: $(this).find("title").text(),
@@ -95,30 +121,6 @@ function WhatsonPlugin() {
                 //~ prog);
             //~ $("#tour_list").append(output);
         //~ });
-
-        $(data).find("exhibition").each( function() {
-            var exhib = {
-                EXHIBITION_TITLE : $(this).find("title").text(),
-                EXHIBITION_SUBTITLE : $(this).find("subtitle").text(),
-                OPENING_DATE: $(this).find("opening_date").text(),
-                CLOSING_DATE: $(this).find("closing_date").text(),
-                LEVEL: $(this).find("level").text()
-            };
-
-            $(this).find("img").each( function() {
-                    console.log('add exhib:'+ exhib.EXHIBITION_TITLE+"-"+$(this).attr("src"));
-
-                    exhib.EXHIBITION_IMAGE = $(this).attr("src");
-
-                    var template = $("#exhibition_template").html();
-                    var output = Mustache.render(template, exhib);
-                    var element = $(output);
-
-                    slides.push(element.get(0));
-                    //~ console.debug("EXH template:"+template);
-                    //~ console.debug("exi html:"+output);
-            });
-        });
 
         Deck.setSlideSet("exhibs", 5, slides);
     }

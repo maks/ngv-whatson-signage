@@ -81,7 +81,7 @@ function Slidedeck() {
     
     /**
      * @param slideSet {String} Name of slideset
-     * @param duration {Number} duration in seconds ot display each slide in set
+     * @param duration {Number} duration in seconds to display each slide in set
      * @param slideDOMs {Array} of HTML DOM objects, each representing 1 slide
      */
     this.setSlideSet = function(slideSet, duration, slideDOMs) {
@@ -104,6 +104,7 @@ function Slidedeck() {
         
     function showNextSlide() {
         $(".slide_display").empty().append(slides[slideCounter].dom);
+	$("#news_container").vTicker('init', {height: 20, showItems: 1});
     }
 }
 
