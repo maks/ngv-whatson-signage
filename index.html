@@ -21,21 +21,23 @@
     <script id="programs_template" type="text/html">
     <div class="wrap">
     <h1>What's On Today</h1>
-		<div class="headingline"></div>
-		<div id="news_container">
-			<ul>
-				<li>
-					<div>
-						<div class="program_block">
-								<div class="time">{{TIMES}}</div><!--time -->
-								<div class="program_title">{{EXHIBITION_TITLE}}: {{EVENT_TITLE}}</div><!-- program_title-->
-								<div class="program_details" ><span>Booked Out</span>, {{VENUE}}</div><!--program_details -->
-						</div><!-- program_block-->
-					</div>
-				</li> 
-			</ul>
-		</div>
+      <div class="headingline"></div>
+	<div id="news_container">
+	  <ul>
+            {{#programs}}
+	    <li>
+               <div>
+		  <div class="program_block">
+		    <div class="time">{{TIMES}}</div><!--time -->
+		    <div class="program_title">{{EXHIBITION_TITLE}}: {{EVENT_TITLE}}</div><!-- program_title-->
+		    <div class="program_details" ><span>Booked Out</span>, {{VENUE}}</div><!--program_details -->
+		  </div><!-- program_block-->
+	       </div>
+	    </li> 
+          {{/programs}}
+	  </ul>
 	</div>
+      </div>
     </script> <!-- /programs_template -->
 
     <script id="exhibition_template" type="text/html">        

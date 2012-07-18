@@ -63,7 +63,8 @@ function WhatsonPlugin() {
 
     function gotXml(data) {
         dataRequestPending = false;
-        var slides = [];
+        var slides = [],
+	programlist = [];
 
         console.log('xml data:', data);
         $(data).find("program").each( function() {
@@ -73,13 +74,14 @@ function WhatsonPlugin() {
                 TIMES: $(this).find("start_time").text(),
                 VENUE: $(this).find("venue").text()
             };
-            console.log('program:'+ prog.EVENT_TITLE);
-            var template = $("#programs_template").html();
-            var output = Mustache.render(template, prog);
-            console.log("templ outp:"+output);
-            var element = $(output);
-            slides.push(element.get(0));
+            console.log('add program:'+ prog.EVENT_TITLE);
+	    programlist.push(prog);
         });
+	var template = $("#programs_template").html();
+	var output = Mustache.render(template, { "programs": programlist});
+	//console.log("templ outp:"+output);
+        var element = $(output);
+        slides.push(element.get(0));
 
         //~ $(data).find("tour").each( function() {
             //~ var prog = {

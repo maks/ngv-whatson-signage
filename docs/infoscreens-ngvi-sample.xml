@@ -20,7 +20,30 @@
     <ticketing_info><![CDATA[]]></ticketing_info>
     <booking_code><![CDATA[]]></booking_code>
     <description><![CDATA[<P>Join our esteemed Director as he speaks on favourite works on display in the nineteenth century painting and sculpture galleries.</P>]]></description>
-</program>        </programs>
+</program>  
+<program>
+    <id>545212:start_date_ts=1340332200,end_date_ts=1340332200,type_code=calendar_event_multi_date</id>
+    <category><![CDATA[NGV Talks]]></category>
+    <subcategory><![CDATA[]]></subcategory>
+    <type>single</type>
+    <name>Date 2325</name>
+    <title><![CDATA[Floor Talk: Gerard Vaughan on the Salon Room and Regency Room]]></title>
+    <exhibition><![CDATA[NGV International Collection]]></exhibition>
+    <exhibition_id><![CDATA[3518]]></exhibition_id>
+    <start_time><![CDATA[12:30]]></start_time>
+    <end_time><![CDATA[:]]></end_time>
+    <entry><![CDATA[Free]]></entry>
+    <venue><![CDATA[Information Desk]]></venue>
+    <location><![CDATA[NGVI]]></location>
+    <level><![CDATA[Level G]]></level>
+    <ticketing_info><![CDATA[]]></ticketing_info>
+    <booking_code><![CDATA[]]></booking_code>
+    <description><![CDATA[<P>Join our esteemed Director as he speaks on favourite works on display in the nineteenth century painting and sculpture galleries.</P>]]></description>
+</program>  
+
+
+
+      </programs>
         <tours>    </tours>
     <exhibitions>
         <exhibition>
