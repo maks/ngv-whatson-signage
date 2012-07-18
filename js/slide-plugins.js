@@ -76,6 +76,7 @@ function WhatsonPlugin() {
             console.log('program:'+ prog.EVENT_TITLE);
             var template = $("#programs_template").html();
             var output = Mustache.render(template, prog);
+            console.log("templ outp:"+output);
             var element = $(output);
             slides.push(element.get(0));
         });
